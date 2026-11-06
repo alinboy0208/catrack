@@ -1,0 +1,6 @@
+{
+  "name": "Toronto Metro Pulse — GTA Interactive Neon Transit & Route Planner",
+  "description": "Interactive neon transit map of Greater Toronto Area's complete subway, LRT, and rapid bus network with Canada-to-Toronto zoom choreography and Dijkstra shortest-path route navigation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
