@@ -1,4 +1,4 @@
-# catrack — Toronto Transit Map & Route Planner
+# Catrack — Toronto Transit Map & Route Planner
 
 **Live Demo:** [catrack-six.vercel.app](https://catrack-six.vercel.app)
 
