@@ -18,31 +18,6 @@ A full-stack web application and online ordering storefront built for **Táº¡p HÃ
 - **Database & ORM:** Prisma
 - **Deployment:** Vercel
 
-## Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/alinboy0208/taphoathuy.git](https://github.com/alinboy0208/taphoathuy.git)
-   cd taphoathuy
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables:**
-   Create a `.env` file in the root directory and configure your database connection string and admin PIN:
-   ```env
-   DATABASE_URL="your_database_connection_string"
-   ```
-
-4. **Generate Prisma client & run the development server:**
-   ```bash
-   npx prisma generate
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) for the customer storefront or [http://localhost:3000/admin](http://localhost:3000/admin) for the admin portal.
 
 ## Project Structure
 
