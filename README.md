@@ -23,17 +23,31 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/alinboy0208/catrack.git](https://github.com/alinboy0208/catrack.git)
+   git clone https://github.com/alinboy0208/catrack.git
    cd catrack
+   ```
 
+2. **Install dependencies:**
+   ```bash
    bun install
-# or: npm install
+   # or: npm install
+   ```
 
-cp .env.example .env
+3. **Set up environment variables:**
+   Create a `.env` file from `.env.example` and add your Google Maps API key:
+   ```bash
+   cp .env.example .env
+   ```
 
-bun run dev
-# or: npm run dev
+4. **Start the development server:**
+   ```bash
+   bun run dev
+   # or: npm run dev
+   ```
 
+## Project Structure
+
+```text
 src/
 ├── components/
 │   ├── TorontoNeonMap.tsx       # Main map canvas and transit line overlays
@@ -44,3 +58,4 @@ src/
 ├── utils/
 │   └── pathfinding.test.ts      # Unit tests for pathfinding logic
 └── App.tsx                      # Application state and layout
+```
