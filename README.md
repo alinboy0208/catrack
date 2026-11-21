@@ -1,43 +1,46 @@
-# 🚇 Toronto Metro Pulse — GTA Interactive Neon Transit & Route Planner
+# catrack — Toronto Transit Map & Route Planner
 
-An interactive, neon-styled transit map and multi-modal route planner for the **Greater Toronto & Hamilton Area (GTHA)** and surrounding regions. Built to visualize regional rail, subway, LRT, and express bus networks with precision station alignment and optimal pathfinding.
+**Live Demo:** [catrack-six.vercel.app](https://catrack-six.vercel.app)
 
----
+> **Note:** This is an experimental personal project exploring AI-assisted development (vibe-coding) to build an interactive transit map and route planner for the Greater Toronto & Hamilton Area (GTHA).
 
-## ✨ Key Features
+## Features
 
-* **Comprehensive GTHA Transit Network:**
-  * Covers **14 major transit lines** including TTC Subway (Line 1, Line 2, etc.), UP Express, GO Rail corridors (Kitchener, Milton, Lakeshore, etc.), LRTs, and 407 Express Bus routes.
-  * Quick network filtering by mode: *Metro & GO Rail (11)*, *LRT & 407 Bus (3)*, or *All (14)*.
-* **Smart Optimal Pathfinding & Route Planner:**
-  * Calculates the fastest multi-modal routes between stations and landmarks (e.g., *CN Tower → Pearson Airport*, *Union → Niagara Falls*, *Union → Kitchener & Guelph*, *Hamilton → Oshawa*).
-  * Displays total travel duration, exact distance (km), number of stops, transfer hubs, walking segments, and **One-Fare** pricing estimates.
-  * **Highlight Active Route & Replay Snake:** Animated route tracing along the tracks to visualize your journey step-by-step.
-* **Clean, Precision-Engineered Map UI:**
-  * **Dynamic Station Visibility:** Station dots remain hidden in the default network overview to keep neon track lines uncluttered, appearing dynamically only when inspecting a specific line or active route.
-  * **100% Track-Aligned Coordinates:** Station markers and parallel corridor offsets are mathematically anchored directly onto the center of each rendered transit line.
-  * **Multi-Region Viewports:** Instant camera presets for *Toronto Core*, *Full GTHA*, *Hamilton & Niagara*, *Kitchener & Guelph*, *Oshawa*, and an interactive *Canada Map View* with centered provincial boundaries.
+- **GTHA Network Map:** Visualizes 14 major transit lines across TTC Subway, UP Express, GO Rail, LRT, and the 407 Express Bus corridor.
+- **Line Filtering:** Toggle visibility by service tier (Metro & GO Rail, LRT & 407 Bus, or All Lines).
+- **Route Planner:** Computes the shortest path between stations or popular landmarks (e.g., CN Tower → Pearson Airport, Union → Niagara Falls) with estimated travel time, distance (km), stop count, and fare breakdowns.
+- **Journey Simulation:** Animated path playback to highlight transfers and step-by-step routing.
+- **Multi-Region Viewports:** Quick camera presets for Toronto Core, Full GTHA, Hamilton & Niagara, Kitchener & Guelph, Oshawa, and a Canada-wide overview.
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
+- **Frontend:** React, TypeScript, Vite
+- **Styling:** Tailwind CSS
+- **Maps & Graphics:** Google Maps API, Custom SVG Overlays
+- **Testing:** Unit tests for the routing engine (`pathfinding.test.ts`)
 
-* **Frontend:** React, TypeScript
-* **Styling & Graphics:** Tailwind CSS, Custom SVG & Interactive Map Overlays
-* **Testing:** Automated pathfinding unit tests (`pathfinding.test.ts`)
+## Getting Started
 
----
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/alinboy0208/catrack.git](https://github.com/alinboy0208/catrack.git)
+   cd catrack
 
-## 📂 Project Structure
+   bun install
+# or: npm install
 
-```text
+cp .env.example .env
+
+bun run dev
+# or: npm run dev
+
 src/
 ├── components/
-│   ├── TorontoNeonMap.tsx       # Main interactive neon transit map & track renderer
-│   ├── RoutePlannerSidebar.tsx  # Directions, line filters, and fare/time breakdown UI
-│   └── CanadaMapView.tsx        # Regional/provincial overview map component
+│   ├── TorontoNeonMap.tsx       # Main map canvas and transit line overlays
+│   ├── RoutePlannerSidebar.tsx  # Route search, line filters, and trip breakdown
+│   └── CanadaMapView.tsx        # Canada national overview mode
 ├── data/
-│   └── torontoTransitData.ts    # Network topology, station coordinates, and track geometry
+│   └── torontoTransitData.ts    # Station coordinates and network graph definitions
 ├── utils/
-│   └── pathfinding.test.ts      # Pathfinding algorithm validation & unit tests
-└── App.tsx                      # Root application state & layout
+│   └── pathfinding.test.ts      # Unit tests for pathfinding logic
+└── App.tsx                      # Application state and layout
